@@ -9,11 +9,13 @@ class Location(models.Model):
     def save_location(self):
         self.save()
 
-class category(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
+
+
 
 
 
@@ -22,8 +24,15 @@ class Image(models.Model):
     description = models.CharField(max_length=30)
     # photo = models.ImageField(upoad_to='images/')
     location = models.ForeignKey(Location)
-    category = models.ManyToManyField(category)
+    category = models.ManyToManyField(Category)
 
     @classmethod
     def get_photos(cls):
         return cls.objects.all()
+
+    @classmethod
+    def search_by_category(cls,category):
+        images = Category.objects.filter(name__icontains=category)
+        return images
+
+

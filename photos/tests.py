@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Location,category,Image
+from .models import Location,Category,Image
 
 class LocationTestClass(TestCase):
     def setUp(self):
@@ -13,9 +13,9 @@ class LocationTestClass(TestCase):
         locations = Location.objects.all()
         self.assertTrue(len(locations)>0)
 
-class categoryTestClass():
+class CategoryTestClass():
     def setup(self):
-        self.new_category = category(name='test')
+        self.new_category = Category(name='test')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_category,category))
