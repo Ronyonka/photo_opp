@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('Welcome to Photo Opp')
+    return render(request,'welcome.html')
