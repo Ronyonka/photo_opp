@@ -23,3 +23,7 @@ class Image(models.Model):
     # photo = models.ImageField(upoad_to='images/')
     location = models.ForeignKey(Location)
     category = models.ManyToManyField(category)
+
+    @classmethod
+    def get_photos(cls):
+        return cls.objects.all()
