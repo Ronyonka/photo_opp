@@ -22,9 +22,9 @@ class Category(models.Model):
 class Image(models.Model):
     image_name = models.CharField(max_length=30)
     description = models.CharField(max_length=30)
-    # photo = models.ImageField(upoad_to='images/')
     location = models.ForeignKey(Location)
     category = models.ManyToManyField(Category)
+    article_image = models.ImageField(upload_to = 'articles/')
 
     @classmethod
     def get_photos(cls):
