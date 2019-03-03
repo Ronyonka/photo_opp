@@ -1,24 +1,25 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Image,Category
+from .models import Image,Category,Location
 
-
-
-def welcome(request):
-    return render(request,'welcome.html')
 
 def all_photos(request):
-    photos = Image.get_photos()
-    return render(request,'all-photos/all-photos.html', {"photos":photos})
+    images = Image.get_photos()
+    return render(request,'all-photos.html', {"images":images})
 
 def search_results(request):
     if 'image' in request.GET and request.GET["image"]:
         Category = request.GET.get("image")
-        searched_image = Image.search_by_category(Category)
-        message = f"{Category}"
+        searched_images = Image.search_by_category(category)
+        message = f"{category}"
 
-        return render(request, 'all-photos/search.html',{"message":message,"image": searched_image})
+        return render(request, 'search.html',{"message":message,"images": searched_images})
 
     else:
         message = "You haven't searched for any term"
-        return render(request, 'all-photos/search.html',{"message":message})
+        return render(request, 'search.html',{"message":message})
+
+
+def location(request,location):
+        locations = Image.filter_by_location(location)
+        return render(request,'location.html',{"images": locations})
