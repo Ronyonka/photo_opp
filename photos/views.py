@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .models import Image,Category
 
 
-# Create your views here.
+
 def welcome(request):
     return render(request,'welcome.html')
 
