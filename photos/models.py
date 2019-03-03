@@ -73,12 +73,12 @@ class Image(models.Model):
     @classmethod
     def search_by_category(cls,category):
         photo = Category.objects.filter(name__icontains = category)[0]
-        return  cls.objects.filter(category_id = photo.id)
+        return  cls.objects.filter(category__id = photo.id)
 
     @classmethod
     def filter_by_location(cls,location):
         the_location = Location.objects.get(name = location)
-        return cls.objects.filter(location_id = the_location.id)
+        return cls.objects.filter(location__id = the_location.id)
 
     def __str__(self):
         return self.name

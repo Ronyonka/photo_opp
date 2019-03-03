@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Image,Category
+from .models import Image,Category,Location
 
 
 def all_photos(request):
@@ -10,8 +10,8 @@ def all_photos(request):
 def search_results(request):
     if 'image' in request.GET and request.GET["image"]:
         Category = request.GET.get("image")
-        searched_images = Image.search_by_category(category)
-        message = f"{category}"
+        searched_images = Image.search_by_category(Category)
+        message = f"{Category}"
 
         return render(request, 'search.html',{"message":message,"images": searched_images})
 
