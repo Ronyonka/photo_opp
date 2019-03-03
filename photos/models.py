@@ -16,11 +16,18 @@ class Location(models.Model):
        return self.name
 
 class Category(models.Model):
-    name = models.CharField(max_length=30)
+   name = models.CharField(max_length = 30)
+   def save_category(self):
+       self.save()
 
-    def __str__(self):
-        return self.name
+   def delete(self):
+       Category.objects.get(id = self.id).delete()
 
+   def update(self,field,val):
+       Category.objects.get(id = self.id).update(field = val)
+
+   def __str__(self):
+       return self.name
 
 
 
