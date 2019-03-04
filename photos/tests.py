@@ -3,7 +3,7 @@ from .models import Location,Category,Image
 
 class LocationTestClass(TestCase):
     def setUp(self):
-        self.nairobi = Location(location_name='Nairobi')
+        self.nairobi = Location(name='Nairobi')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.nairobi,Location))
@@ -31,7 +31,7 @@ class ImageTestClass(TestCase):
         self.new_category = category(name='test')
         self.new_category.save_category()
 
-        self.new_image = Image(image_name='test image', description='this is a test description',location=self.nairobi)
+        self.new_image = Image(name='test image', description='this is a test description',location=self.nairobi)
         self.new_image.save()
 
         self.new_image.category.add(self.new_category)
