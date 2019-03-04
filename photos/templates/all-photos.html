@@ -8,7 +8,7 @@
 {%for image in images%}
 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
     <img src="{{image.image_url.url}}" class="img-responsive"  alt="Image" style="width:100%; height:350px; padding-left: 20px;padding-right:25px;"><br>
-    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#{{image.id}}" style="margin-left:35%; margin-top:10px;margin-bottom:25px; opacity:0.7; background-color: #fff; border: 2px solid #875053; color: #875053; font-weight: 300;" >View image</button>
+    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#{{image.id}}" style="margin-left:35%; margin-top:10px;margin-bottom:25px; opacity:0.7; background-color: #f6e8ea; border: 2px solid #875053; color: #875053; font-weight: 300;" >View image</button>
 </div>
  <!-- Modal -->
 <div class="modal fade" id="{{image.id}}" role="dialog">

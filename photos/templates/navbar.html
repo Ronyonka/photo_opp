@@ -8,15 +8,15 @@
 <body>
       <!-- Fixed navbar -->
       <nav class="navbar navbar-default navbar-fixed-top" id="photopp" style="background-color: #875053; color: #C6AC8F; font-weight: bold; margin-bottom: 40px;">
-          <div class="container">
+          <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="#">Photo-Opp</a>
+              <a class="navbar-brand" href="{% url 'all_photos' %}" style=" color: #fff">Photo-Opp</a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+            <!-- <div id="navbar" class="navbar-collapse collapse"> -->
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">Locations</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active" style=" color: #875053"><a href="{% url 'all_photos' %}">Home</a></li>
+                <li><a href="#about" style=" color: #fff">Locations</a></li>
+   
 
               </ul>
           <!-- Adding a search form  -->
@@ -34,7 +34,7 @@
             </form>
           </div>
           <!-- search form end -->
-            </div><!--/.nav-collapse -->
+            <!-- </div>/.nav-collapse -->
           </div>
         </nav>
 
