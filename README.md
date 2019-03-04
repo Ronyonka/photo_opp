@@ -7,6 +7,7 @@ It was generated using Django.
 
 ## Description
 This is a Django application which allows users to view photos which can be filtered into their different categories and locations.
+
 Try it out : <https://rongallery.herokuapp.com/>
 ## Prerequisites
 You need the following to work on the project: -
