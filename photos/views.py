@@ -9,9 +9,9 @@ def all_photos(request):
 
 def search_results(request):
     if 'image' in request.GET and request.GET["image"]:
-        Category = request.GET.get("image")
-        searched_images = Image.search_by_category(Category)
-        message = f"{Category}"
+        category = request.GET.get("image")
+        searched_images = Image.search_by_category(category)
+        message = f"{category}"
 
         return render(request, 'search.html',{"message":message,"images": searched_images})
 
