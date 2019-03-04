@@ -54,7 +54,7 @@ DISABLE_COLLECTSTATIC=1
 * create a database called gallery
 ```bash
 (virtual)$ psql
-ron=#CREATE DATABASE gallery;
+ron=# CREATE DATABASE gallery;
 ```
 * make migrations
 ```bash
