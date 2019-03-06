@@ -69,14 +69,12 @@ ron=# CREATE DATABASE gallery;
 * access the application on this localhost address http://127.0.0.1:8000
 
 ## Behaviour Driven Development
-|  Behaviour |  Input  |  Output |
-|------------|---------|---------|
-| Home | - | - |
-|View Images| Click on View Image | A larger image appears with the image name, location and description|
-|Click on Locations dropdown | Asia | Images Taken in Asia are Displayed |
-|Search | Nature | Images in the Nature category are Displayed |
-|Delete Blog| Click on Delete | Post is deleted|
-|Write Blogs | Click on New Blog |	A form for a new blog is displayed|
+| Behaviour     | Input     | Output  |
+| ------------- |:-------------:| -----:|
+| User wants to see photos | They enter the site | They view a list of uploaded photos |
+| User wants to see and enlarged photo | They click on view images | A modal appears with the enlarged image and its details  |
+| User wants to search for image | They enter a category name in the search bar | They are directed to a page with images from that category displayed |
+| User wants to view images from a certain location | They select a location from a dropdown list | Photos from that location are displayed |
 
 ## Link to Live Website 
 Here is a link to the live website: <https://rongallery.herokuapp.com/>
